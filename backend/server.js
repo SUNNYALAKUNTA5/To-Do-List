@@ -52,18 +52,6 @@ app.post('/add-item',(req,res) => {
        
 });
 
-//retreiving latest data
-app.get('/latest',(req, res) => {
-    db.query(`select * from todoitems where Id = (select max(ID) from todoitems);`,(err, results) => {
-        if(err){
-             console.log("error occured..!",err);
-            return
-        }
-        console.log("Data:",results);
-        res.json({results});
-    })
-})
-
 
 
 //updating the database

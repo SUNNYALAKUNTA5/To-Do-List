@@ -128,12 +128,6 @@
         headers: {'Content-Type' : 'application/json'},
         body: JSON.stringify({text})
       });
-      const data = await fetch('http://localhost:3000/latest',{
-        method: 'GET',
-        headers: {'Content-Type' :'application/json'},
-      })
-      .then(response => response.json())
-      .then(data => data.itemdata)
     }
     
 
